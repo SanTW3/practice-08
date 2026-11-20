@@ -1,0 +1,6 @@
+digraph G {
+n0 [label="BusinessTripService: trips List<BusinessTrip> / create, findByStatus, addDaysUntilStart"];
+n1 [label="BusinessTrip: private final id, start, end / private status, rejectionReason"];
+n2 [label="submit, approve, reject, cancel, complete / getId, getStart, getEnd, getStatus, getRejectionReason"];
+n3 [label="TripStatus: DRAFT, SUBMITTED, APPROVED / REJECTED, CANCELLED, COMPLETED"];
+n0->n1;n1->n2;n2->n3;}

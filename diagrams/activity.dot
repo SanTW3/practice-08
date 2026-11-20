@@ -1,0 +1,8 @@
+digraph G {
+n0 [label="DRAFT → submit → SUBMITTED"];
+n1 [label="SUBMITTED → approve → APPROVED или reject → REJECTED"];
+n2 [label="APPROVED → complete при today >= end → COMPLETED"];
+n3 [label="DRAFT / SUBMITTED → cancel → CANCELLED"];
+n4 [label="APPROVED → cancel при today + 3 <= start → CANCELLED"];
+n5 [label="Недопустимое состояние или дата: исключение"];
+n0->n1;n1->n2;n2->n3;n3->n4;n4->n5;}
